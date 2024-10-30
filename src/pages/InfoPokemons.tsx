@@ -6,7 +6,6 @@ interface Props {
     data: IRegion | IApiResponseAll;
 }
 
-
 const InfoPokemons = ({ data }: Props ) => {
 
   return (

@@ -78,7 +78,7 @@ const PokedexProvider: React.FC<PokedexProviderProps> = ({ children }) => {
                         const result = await getPokemonsRegion(region.name);
                        
                         if (Array.isArray(result)) {
-                            newResponse.push(...result); // Injeta os resultados diretamente em newResponse
+                            newResponse.push(...result); 
                         }
                         return result; 
                     } catch (error) {
@@ -89,7 +89,6 @@ const PokedexProvider: React.FC<PokedexProviderProps> = ({ children }) => {
     
                 await Promise.all(promises);
             }
-    
     
             return newResponse.length > 0 ? newResponse : null; 
     

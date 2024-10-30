@@ -58,6 +58,7 @@ export default function Modal({ open, setOpen, selectedPokemon }: ModalProps) {
     };
 
     const handleTabChange = (event: React.SyntheticEvent, newIndex: number) => {
+        console.log(event)
         setTabIndex(newIndex);
     };
 

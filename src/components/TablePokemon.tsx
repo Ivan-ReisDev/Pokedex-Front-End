@@ -78,6 +78,7 @@ export default function TablePokemon({ data }: Props) {
   const [selectedPokemon, setSelectedPokemon] = React.useState<string | null>(null);
 
   const handleChangePage = (event: unknown, newPage: number) => {
+    console.log(event)
     setPage(newPage);
   };
 
@@ -91,7 +92,7 @@ export default function TablePokemon({ data }: Props) {
     setOpen(true); 
   };
 
-  const rows = data.flatMap(region =>
+  const rows = (Array.isArray(data) ? data : [data]).flatMap(region =>
     region.pokemon_encounters.map(encounter => ({
       pokemon: encounter.pokemon.name,
       regiao: region.name,
